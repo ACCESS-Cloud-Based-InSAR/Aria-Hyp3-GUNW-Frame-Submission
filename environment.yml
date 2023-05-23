@@ -1,0 +1,37 @@
+name: aria_hyp3_env
+channels:
+  - conda-forge
+dependencies:
+  - python=>3.11  # required for shapely 2.0.0
+  - pip
+  # For packaging, and testing
+  - flake8
+  - flake8-import-order
+  - flake8-blind-except
+  - flake8-builtins
+  - ipympl
+  - setuptools
+  - setuptools_scm
+  - wheel
+  - pytest
+  - pytest-console-scripts
+  - pytest-cov
+  # For running
+  - importlib_metadata
+  # jupyter
+  - jupyter
+  - jupyterlab
+  - jupytext
+  - ipykernel
+  # gis
+  - matplotlib
+  - numpy
+  - rasterio
+  - geopandas
+  - shapely=>2.0
+  - tqdm
+  - requests
+  - asf_search
+  - hyp3_sdk
+  - pip:
+    - git+https://github.com/ACCESS-Cloud-Based-InSAR/s1-frame-enumerator.git
