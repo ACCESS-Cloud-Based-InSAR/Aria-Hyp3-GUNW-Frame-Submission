@@ -64,3 +64,7 @@ __pycache__/
 
 # Ignore logs
 *.log
+
+# Ignore notebooks and yml
+enumeration_parameters_n3.yml
+1_Enumerating_a_Large_AOI-n3.ipynb
