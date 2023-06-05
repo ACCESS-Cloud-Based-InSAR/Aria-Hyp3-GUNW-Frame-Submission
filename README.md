@@ -9,26 +9,30 @@ Currently, we are focused on reprocessing a full time-series of GUNWs v3. In fut
 
 The general workflow is:
 
-1. Create a large AOI (this example will focus on coastal Continental US excluding Alaska)
-2. Enumerate GUNWs for several temporal baselines
+0. Create a large AOI (this example will focus on coastal Continental US excluding Alaska)
+1. Enumerate GUNWs for several temporal baselines
    + Use the [S1-Frame-Enumerator](https://github.com/ACCESS-Cloud-Based-InSAR/s1-frame-enumerator)
    + Deduplicate Submissions (due to S1 SLC availability)
    + Serialize the Submission Data
-3. Submit Jobs to Hyp3 through the Rest API (in Batches)
+2. Submit Jobs to Hyp3 through the Rest API (in Batches)
    + Load local database
    + Check CMR for duplicates
-4. Track and Resubmit Failed Jobs to Hyp3
+3. Track and Resubmit Failed Jobs to Hyp3
    + Serialize submission data and delivery status
 
 There are two types of data within this repository:
 
 + AOIs - large areas of interest and last processing date
-+ Parquet files used for processing campaigns
++ Geojson files used to store SLC stacks and pairings from 1.
 
 # Usage
 
+Go through the notebooks in order.
 
 
 # Installation
 
-# Contributing
+```
+mamba env update -f environment.yml
+python -m ipykernel install --user --name aria_hyp3_env
+```
