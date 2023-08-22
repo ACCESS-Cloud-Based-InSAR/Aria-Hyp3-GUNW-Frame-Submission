@@ -1,7 +1,7 @@
 enumeration_parameters:
-  aoi_geojson: AOI/mainland_us_coast.geojson
-  aoi_name: mainland_us_coast
-  neighbors: 2
+  aoi_geojson: AOIs/us_east.geojson
+  aoi_name: us_east
+  neighbors: 3
   min_temporal_baseline_days: [0, 180, 365]
-  stack_directory: out/stack/mainland_us_coast_thru_202305
-  enum_directory: out/enum/mainland_us_coast_thru_202305_n2
+  stack_directory: out/stack/us_east
+  enum_directory: out/enum/us_east_n3
