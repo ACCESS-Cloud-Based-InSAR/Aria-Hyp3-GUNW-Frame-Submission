@@ -34,15 +34,12 @@ __pycache__/
 *.py[cod]
 *$py.class
 
-# Setuptools distribution folder.
-/dist/
-
-# Python egg metadata, regenerated from source files by setuptools.
-/*.egg-info
-
 # Environments
 .env
 .envrc
+
+# Data
+out/
 
 # Gdal and other image formats
 *.tif

@@ -14,6 +14,7 @@ dependencies:
   - setuptools_scm
   - wheel
   - pytest
+  - pydantic
   - pytest-console-scripts
   - pytest-cov
   # For running
@@ -26,12 +27,12 @@ dependencies:
   # gis
   - matplotlib
   - numpy
+  - contextily
   - rasterio
   - geopandas
   - shapely=>2.0
   - tqdm
+  - s1_frame_enumerator
   - requests
   - asf_search
   - hyp3_sdk
-  - pip:
-    - git+https://github.com/ACCESS-Cloud-Based-InSAR/s1-frame-enumerator.git

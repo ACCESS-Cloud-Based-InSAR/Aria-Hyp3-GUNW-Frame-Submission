@@ -1,7 +1,12 @@
 enumeration_parameters:
-  aoi_geojson: AOIs/us_east.geojson
-  aoi_name: us_east
-  neighbors: 3
-  min_temporal_baseline_days: [0, 180, 365]
-  stack_directory: out/stack/us_east
-  enum_directory: out/enum/us_east_n3
+  aoi_name: tibet
+  n_secondaries_per_reference: [4, 2, 2, 2]
+  n_seeds: 2
+  track_numbers: [136, 33]
+  temporal_baseline_days: [0, 90, 180, 365]
+  # months will only add to pairs; both with and without constraints enumerations performed
+  month_constraints: 
+  exclusive_month_constraints: false
+  valid_date_ranges: 
+   - ['2014-01-01', '2022-11-01']
+
