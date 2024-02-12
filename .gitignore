@@ -63,5 +63,7 @@ out/
 *.log
 
 # Ignore notebooks and yml
-enumeration_parameters_n3.yml
-1_Enumerating_a_Large_AOI-n3.ipynb
+0c_Create_an_AOI_CONUS_West.ipynb
+
+#AOIs
+!AOIs/tibet.geojson
