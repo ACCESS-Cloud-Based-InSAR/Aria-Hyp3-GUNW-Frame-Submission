@@ -66,7 +66,8 @@ class enumParams:
 
         yamls_dir = Path('enum_configs')
         yamls_dir.mkdir(exist_ok=True)
-        self.yaml_path_record = yamls_dir / f"{self.aoi_name}_{self.date_of_enum.year}-{self.date_of_enum.month:02d}.yml"
+        self.yaml_path_record = (yamls_dir /
+                                 f"{self.aoi_name}_{self.date_of_enum.year}-{self.date_of_enum.month:02d}.yml")
 
     @validator("valid_date_ranges")
     def str_to_dates(cls, v):
