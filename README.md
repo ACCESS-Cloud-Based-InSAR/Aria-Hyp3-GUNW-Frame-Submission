@@ -42,3 +42,11 @@ python -m ipykernel install --user --name aria_hyp3_env
 Go through the notebooks in order.
 
 Update the [`enumeration_parameters.yml`](enumeration_parameters.yml) as needed for the enumeration.
+
+# Checklist before Submitting Jobs
+
+- [ ] Correct AWS account (We have three accounts: Tibet, Nisar, and ACCESS)
+- [ ] Correct job type (INSAR_ISCE vs. INSAR_ISCE_TEST, usually former for large jobs)
+- [ ] Weather model correct
+    - [ ] HRRR for CONUS (this excludes AK! until we update RAiDER)
+    - [ ] None everywhere else

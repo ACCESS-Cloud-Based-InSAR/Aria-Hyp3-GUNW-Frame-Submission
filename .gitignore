@@ -56,7 +56,6 @@ out/
 *.kmz
 *.jpg
 *.wld
-*.geojson
 *.json
 
 # Ignore logs

@@ -1,0 +1,31 @@
+enumeration_parameters:
+  aoi_geojson_path: AOIs/tibet.geojson
+  aoi_name: tibet
+  data_directory: out
+  date_of_enum: 2024-02-14
+  enum_dir: out/tibet__tb_0-90-180-365__neigh_4-2-2-2/enum
+  enum_parent_dir: out/tibet__tb_0-90-180-365__neigh_4-2-2-2
+  exclusive_month_constraints: false
+  month_constraint:
+  n_secondaries_per_reference:
+  - 4
+  - 2
+  - 2
+  - 2
+  n_seeds: 2
+  stack_dir: out/tibet__tb_0-90-180-365__neigh_4-2-2-2/stack
+  temporal_baseline_days:
+  - 0
+  - 90
+  - 180
+  - 365
+  track_numbers:
+  - 136
+  - 33
+  valid_date_ranges:
+  - !!python/tuple
+    - 2014-01-01 00:00:00+00:00
+    - 2022-11-01 00:00:00+00:00
+  weather_model:
+  yaml_path: out/tibet__tb_0-90-180-365__neigh_4-2-2-2/enum_params_2024-02-14.yml
+  yaml_path_record: enum_configs/tibet_2024-02.yml
