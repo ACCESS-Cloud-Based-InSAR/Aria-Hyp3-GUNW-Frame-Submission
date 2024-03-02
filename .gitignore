@@ -66,3 +66,6 @@ out/
 
 #AOIs
 !AOIs/tibet.geojson
+
+# Notebooks
+TURKEY---2_Submitting_Jobs_to_Hyp3.ipynb

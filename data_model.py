@@ -46,7 +46,7 @@ class enumParams:
     month_constraint: Optional[list[int]] = None
     exclusive_month_constraints: Optional[bool] = False
     aoi_geojson_path: Optional[str | Path] = None
-    valid_date_ranges: Optional[list[tuple]] = None
+    valid_date_ranges: Optional[list[list]] = None
 
     def __post_init__(self):
         tbs_str = list(map(str, self.temporal_baseline_days))
@@ -74,12 +74,21 @@ class enumParams:
         if v is None:
             return v
         if isinstance(v, list):
-            def to_dt(dt_str: str) -> datetime.datetime:
-                return datetime.datetime.strptime(dt_str, '%Y-%m-%d')
+            def to_dt(dt: str | datetime.datetime | datetime.date) -> datetime.datetime:
+                if isinstance(dt, datetime.datetime):
+                    return dt
+                if isinstance(dt, datetime.date):
+                    return datetime.datetime(dt.year, dt.month, dt.day)
+                elif isinstance(dt, str):
+                    return datetime.datetime.strptime(dt, '%Y-%m-%d')
+                else:
+                    raise NotImplementedError('datetime in valid date range is not recognized')
             # Ensures both validation and correct casting
             utc_tz = datetime.timezone.utc
-            v = [(to_dt(item[0]).replace(tzinfo=utc_tz),
-                  to_dt(item[1]).replace(tzinfo=utc_tz)) for item in v]
+            v = [[to_dt(item[0]).replace(tzinfo=utc_tz),
+                  to_dt(item[1]).replace(tzinfo=utc_tz)] for item in v]
+            if any([item[0] >= item[1] for item in v]):
+                raise ValueError('First date item must be smaller than second')
         return v
 
     @validator("stack_dir", "enum_dir", "yaml_path", "data_dir", "data_dir", pre=True)

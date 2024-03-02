@@ -13,6 +13,7 @@ dependencies:
   - setuptools
   - setuptools_scm
   - wheel
+  - boto3
   - pytest
   - pydantic
   - pytest-console-scripts
