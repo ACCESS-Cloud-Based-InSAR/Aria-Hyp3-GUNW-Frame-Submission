@@ -43,7 +43,7 @@ class enumParams:
     enum_dir: Optional[Path | str] = None
     yaml_path: Optional[Path | str] = None
     weather_model: Optional[str] = None
-    month_constraint: Optional[list[int]] = None
+    month_constraints: Optional[list[int]] = None
     exclusive_month_constraints: Optional[bool] = False
     aoi_geojson_path: Optional[str | Path] = None
     valid_date_ranges: Optional[list[list]] = None
@@ -114,7 +114,7 @@ class enumParams:
             raise ValueError(f'The aoi_name "{v.stem}" needs to have geojson path {v}')
         return v
 
-    @field_validator("month_constraint")
+    @field_validator("month_constraints")
     @classmethod
     def check_valid_month(cls, v: list, info: ValidationInfo) -> list:
         if isinstance(v, list):
