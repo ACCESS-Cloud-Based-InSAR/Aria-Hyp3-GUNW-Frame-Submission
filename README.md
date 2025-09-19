@@ -45,6 +45,7 @@ Update the [`enumeration_parameters.yml`](enumeration_parameters.yml) as needed 
 
 # Checklist before Submitting Jobs
 
+- [ ] Check you have the correct earthdata username! If you use a ~/.netrc, be careful! Use `access_cloud_based_insar` for as ops user.
 - [ ] Correct AWS account (We have three accounts: Tibet, Nisar, and ACCESS)
 - [ ] Correct job type (INSAR_ISCE vs. INSAR_ISCE_TEST, usually former for large jobs)
 - [ ] Weather model correct
