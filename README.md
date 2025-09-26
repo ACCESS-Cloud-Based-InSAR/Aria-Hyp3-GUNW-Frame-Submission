@@ -46,8 +46,8 @@ Update the [`enumeration_parameters.yml`](enumeration_parameters.yml) as needed 
 # Checklist before Submitting Jobs
 
 - [ ] Check you have the correct earthdata username! If you use a ~/.netrc, be careful! Use `access_cloud_based_insar` for as ops user.
-- [ ] Correct AWS account (We have three accounts: Tibet, Nisar, and ACCESS)
-- [ ] Correct job type (INSAR_ISCE vs. INSAR_ISCE_TEST, usually former for large jobs)
+- [ ] Correct AWS account for hyp3 endpoint: (We have three accounts: Tibet, Nisar, and ACCESS)
+- [ ] Correct endpoint within account i.e. `https://hyp3-a19-jpl.asf.alaska.edu` (production) vs. `https://hyp3-a19-jpl-test.asf.alaska.edu` (test)
 - [ ] Weather model correct
     - [ ] HRRR for CONUS (this excludes AK! until we update RAiDER)
     - [ ] None everywhere else
@@ -87,3 +87,7 @@ Suppose we wish to explore a different instance family like the "memory-optimize
 ## Some notes on the the Current Submission Workflow
 
 We have experience getting 90-95% of jobs to run successfully -- transient errors may persist at this scale or some edge ISCE case. This has been good enough to generate time series. With on-demand instances, we can get close to that from the first run. With spot instances, we have reduced our fleet significantly, but have found as of this writing about 87% success. It's good to submit your jobs in a notebook, record the job names for monitoring, and then resubmit the failures. We have some scripts from Andrew Johnston to further analyze spot terminations from jobs that fail.
+
+## Catching up AOIs
+
+Currently deduplication is a bottle neck as we individually check each product within the archive. Therefore, if there is a large AOI, it's best to use `valid_date_range` to reduce the size of a stack and then enumerate that. For example, if the last GUNW over an AOI has some reference date, use a few months before that for the entire AOI to present day and that should allow you to enumerate the AOI effectively without having to de-duplicate the AOI over a time span that was previously enumerated.

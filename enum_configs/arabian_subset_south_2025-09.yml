@@ -1,0 +1,28 @@
+enumeration_parameters:
+  aoi_geojson_path: AOIs/arabian_subset_south.geojson
+  aoi_name: arabian_subset_south
+  data_directory: out
+  date_of_enum: 2025-09-26
+  enum_dir: out/arabian_subset_south__tb_0-180-365__neigh_4-2-2/enum
+  enum_parent_dir: out/arabian_subset_south__tb_0-180-365__neigh_4-2-2
+  exclusive_month_constraints: false
+  month_constraints:
+  n_secondaries_per_reference:
+  - 4
+  - 2
+  - 2
+  n_seeds: 5
+  stack_dir: out/arabian_subset_south__tb_0-180-365__neigh_4-2-2/stack
+  temporal_baseline_days:
+  - 0
+  - 180
+  - 365
+  track_numbers:
+  - 14
+  - 116
+  valid_date_ranges:
+  - - 2021-01-01 00:00:00+00:00
+    - 2025-09-25 00:00:00+00:00
+  weather_model:
+  yaml_path: out/arabian_subset_south__tb_0-180-365__neigh_4-2-2/enum_params_2025-09-26.yml
+  yaml_path_record: enum_configs/arabian_subset_south_2025-09.yml
