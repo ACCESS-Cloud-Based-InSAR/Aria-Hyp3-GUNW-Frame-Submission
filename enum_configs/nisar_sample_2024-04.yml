@@ -1,0 +1,24 @@
+enumeration_parameters:
+  aoi_geojson_path: AOIs/nisar_sample.geojson
+  aoi_name: nisar_sample
+  data_directory: out
+  date_of_enum: 2024-04-18
+  enum_dir: out/nisar_sample__tb_0-180-365__neigh_3-1-1/enum
+  enum_parent_dir: out/nisar_sample__tb_0-180-365__neigh_3-1-1
+  exclusive_month_constraints: false
+  month_constraints:
+  n_secondaries_per_reference:
+  - 3
+  - 1
+  - 1
+  n_seeds: 3
+  stack_dir: out/nisar_sample__tb_0-180-365__neigh_3-1-1/stack
+  temporal_baseline_days:
+  - 0
+  - 180
+  - 365
+  track_numbers:
+  valid_date_ranges:
+  weather_model: hrrr
+  yaml_path: out/nisar_sample__tb_0-180-365__neigh_3-1-1/enum_params_2024-04-18.yml
+  yaml_path_record: enum_configs/nisar_sample_2024-04.yml

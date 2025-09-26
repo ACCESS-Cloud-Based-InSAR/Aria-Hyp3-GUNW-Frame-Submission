@@ -1,10 +1,7 @@
 name: aria_hyp3_env
-channels:
-  - conda-forge
 dependencies:
-  - python=>3.11  # required for shapely 2.0.0
+  - python>=3.11  # required for shapely 2.0.0
   - pip
-  # For packaging, and testing
   - flake8
   - flake8-import-order
   - flake8-blind-except
@@ -31,7 +28,7 @@ dependencies:
   - contextily
   - rasterio
   - geopandas>=0.14
-  - shapely=>2.0
+  - shapely>=2.0
   - tqdm
   - s1_frame_enumerator
   - requests

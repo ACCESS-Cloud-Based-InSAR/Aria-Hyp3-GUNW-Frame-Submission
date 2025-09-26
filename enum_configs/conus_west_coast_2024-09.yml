@@ -2,7 +2,7 @@ enumeration_parameters:
   aoi_geojson_path: AOIs/conus_west_coast.geojson
   aoi_name: conus_west_coast
   data_directory: out
-  date_of_enum: 2024-03-13
+  date_of_enum: 2024-09-23
   enum_dir: out/conus_west_coast__tb_0-180-365__neigh_3/enum
   enum_parent_dir: out/conus_west_coast__tb_0-180-365__neigh_3
   exclusive_month_constraints: false
@@ -16,6 +16,6 @@ enumeration_parameters:
   - 365
   track_numbers:
   valid_date_ranges:
-  weather_model:
-  yaml_path: out/conus_west_coast__tb_0-180-365__neigh_3/enum_params_2024-03-13.yml
-  yaml_path_record: enum_configs/conus_west_coast_2024-03.yml
+  weather_model: hrrr
+  yaml_path: out/conus_west_coast__tb_0-180-365__neigh_3/enum_params_2024-09-23.yml
+  yaml_path_record: enum_configs/conus_west_coast_2024-09.yml

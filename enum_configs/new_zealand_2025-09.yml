@@ -1,0 +1,40 @@
+enumeration_parameters:
+  aoi_geojson_path: AOIs/new_zealand.geojson
+  aoi_name: new_zealand
+  data_directory: out
+  date_of_enum: 2025-09-25
+  enum_dir: out/new_zealand__tb_0-365__neigh_3-1/enum
+  enum_parent_dir: out/new_zealand__tb_0-365__neigh_3-1
+  exclusive_month_constraints: false
+  month_constraints:
+  n_secondaries_per_reference:
+  - 3
+  - 1
+  n_seeds: 3
+  stack_dir: out/new_zealand__tb_0-365__neigh_3-1/stack
+  temporal_baseline_days:
+  - 0
+  - 365
+  track_numbers:
+  - 8
+  - 23
+  - 44
+  - 52
+  - 67
+  - 73
+  - 81
+  - 96
+  - 102
+  - 110
+  - 117
+  - 140
+  - 146
+  - 154
+  - 169
+  - 175
+  valid_date_ranges:
+  - - 2024-09-01 00:00:00+00:00
+    - 2025-09-25 00:00:00+00:00
+  weather_model:
+  yaml_path: out/new_zealand__tb_0-365__neigh_3-1/enum_params_2025-09-25.yml
+  yaml_path_record: enum_configs/new_zealand_2025-09.yml

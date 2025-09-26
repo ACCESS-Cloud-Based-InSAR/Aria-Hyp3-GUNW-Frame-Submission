@@ -1,0 +1,26 @@
+enumeration_parameters:
+  aoi_geojson_path: AOIs/queensland.geojson
+  aoi_name: queensland
+  data_directory: out
+  date_of_enum: 2025-08-19
+  enum_dir: out/queensland__tb_0-180-365__neigh_3-1-1/enum
+  enum_parent_dir: out/queensland__tb_0-180-365__neigh_3-1-1
+  exclusive_month_constraints: false
+  month_constraints:
+  n_secondaries_per_reference:
+  - 3
+  - 1
+  - 1
+  n_seeds: 3
+  stack_dir: out/queensland__tb_0-180-365__neigh_3-1-1/stack
+  temporal_baseline_days:
+  - 0
+  - 180
+  - 365
+  track_numbers:
+  valid_date_ranges:
+  - - 2025-01-01 00:00:00+00:00
+    - 2025-08-19 00:00:00+00:00
+  weather_model:
+  yaml_path: out/queensland__tb_0-180-365__neigh_3-1-1/enum_params_2025-08-19.yml
+  yaml_path_record: enum_configs/queensland_2025-08.yml
